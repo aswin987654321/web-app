@@ -1,0 +1,12 @@
+version: '3'
+services:
+  frontend:
+    build: ./my-react-app
+    ports:
+      - "3000:80"
+  backend:
+    build: ./my-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
